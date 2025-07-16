@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serila Conciergerie</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #000;
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+    header {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+    header video {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+    header .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+    header h1 {
+      font-size: 3rem;
+      color: white;
+      z-index: 2;
+      position: relative;
+      text-align: center;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: 'Lucida Handwriting', cursive;
+      padding: 0 20px;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background-color: #111;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+    .contact {
+      text-align: center;
+    }
+    .contact a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .video-section {
+      position: relative;
+      padding: 0;
+    }
+    .video-section video {
+      width: 100%;
+      display: block;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <video autoplay muted loop playsinline>
+      <source src="video1.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+    <h1 data-aos="fade-down">Serila Conciergerie<br><em>“𝓛𝓮 𝓵𝓾𝔁𝓮 𝓭𝓮 𝓷𝓮 𝓻𝓲𝓮𝓷 𝓰é𝓻𝓮𝓻. ✨”</em></h1>
+  </header>
+
+  <section data-aos="fade-up">
+    <h2>Nos Services</h2>
+    <div class="services">
+      <div class="card" data-aos="fade-right">
+        <h3>Organisation de mariages</h3>
+        <p>De la cérémonie à la soirée, tout est pris en charge selon vos envies.</p>
+      </div>
+      <div class="card" data-aos="fade-up">
+        <h3>Conciergerie sur-mesure</h3>
+        <p>Un accompagnement haut de gamme pour vos évènements privés.</p>
+      </div>
+      <div class="card" data-aos="fade-left">
+        <h3>Prestataires de confiance</h3>
+        <p>Un réseau premium sélectionné pour l’excellence de ses services.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="video-section" data-aos="fade-up">
+    <video autoplay muted loop playsinline>
+      <source src="video2.mp4" type="video/mp4">
+    </video>
+  </section>
+
+  <section class="contact" data-aos="zoom-in">
+    <h2>Contactez-nous</h2>
+    <p>📩 DM Instagram ou WhatsApp pour un devis personnalisé</p>
+    <p>📱 <a href="https://wa.me/33612345678" target="_blank">+33 6 12 34 56 78</a></p>
+  </section>
+
+  <footer data-aos="fade-in">
+    © 2025 Serila Conciergerie — Tous droits réservés.
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
