@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serila Conciergerie</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #111;
+      color: #fff;
+      scroll-behavior: smooth;
+      line-height: 1.6;
+    }
+    header {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    header video {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+    header .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.35);
+      z-index: 1;
+    }
+    header h1 {
+      position: relative;
+      z-index: 2;
+      font-size: 3rem;
+      color: #fff;
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      padding: 0 20px;
+    }
+    section {
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    h2 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 40px;
+      font-family: 'Playfair Display', serif;
+    }
+    .services-container {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .services-container img {
+      width: 50%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .services-content {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      top: 50%;
+      transform: translateY(-50%);
+      color: white;
+      z-index: 2;
+      font-size: 1.2rem;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.4);
+    }
+    .card {
+      background: #222;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(255,255,255,0.05);
+      transition: transform 0.3s;
+      color: #fff;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+    .contact {
+      text-align: center;
+      background: #111;
+    }
+    .contact a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .video-section {
+      width: 100%;
+      padding: 0;
+      overflow: hidden;
+    }
+    .video-section video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .about {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      text-align: center;
+    }
+    .instagram-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: #fff;
+      color: #000;
+      text-decoration: none;
+      border-radius: 30px;
+      transition: background 0.3s;
+    }
+    .instagram-button:hover {
+      background: #ddd;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 0.9rem;
+      color: #999;
+      background: #000;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <video autoplay muted loop playsinline>
+      <source src="video1.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+    <h1 data-aos="fade-down">Serila Conciergerie<br><em>“𝓛𝓮 𝓵𝓾𝔁𝓮 𝓭𝓮 𝓷𝓮 𝓻𝓲𝓮𝓷 𝓰é𝓻𝓮𝓻. ✨”</em></h1>
+  </header>
+
+  <section class="services-container" data-aos="fade-up">
+    <img src="gallery1.png" alt="fond 1">
+    <img src="gallery2.png" alt="fond 2">
+    <div class="services-content">
+      <h2>Nos Services</h2>
+      <p>De l’organisation de mariage à la conciergerie haut de gamme, nous vous accompagnons avec excellence et discrétion.</p>
+    </div>
+  </section>
+
+  <section class="about" data-aos="fade-up">
+    <h2>À propos</h2>
+    <p>Serila Conciergerie est née d'une passion pour l'élégance et la sérénité. Nous orchestrons vos événements avec rigueur, sensibilité et un goût prononcé pour le détail. Faites l'expérience d'une organisation fluide et haut de gamme, où vous n'avez qu'à profiter.</p>
+  </section>
+
+  <section class="video-section" data-aos="fade-up">
+    <video autoplay muted loop playsinline>
+      <source src="video2.mp4" type="video/mp4">
+    </video>
+  </section>
+
+  <section class="contact" data-aos="zoom-in">
+    <h2>Contactez-nous</h2>
+    <p>📩 Contact en DM Instagram ou par WhatsApp pour un devis personnalisé</p>
+    <p>📱 <a href="https://wa.me/33612345678" target="_blank">+33 6 12 34 56 78</a></p>
+    <a class="instagram-button" href="https://www.instagram.com/serila_conciergerie" target="_blank">📷 Suivez-nous sur Instagram</a>
+  </section>
+
+  <footer data-aos="fade-in">
+    © 2025 Serila Conciergerie — Tous droits réservés.
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
