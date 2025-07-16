@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serila Conciergerie - Effet Scroll Généralisé</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <style>
+    /* ... (Les styles CSS sont inchangés par rapport à la version précédente où le menu était visible) ... */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    nav {
+      position: fixed; top: 0; width: 100%;
+      background-color: rgba(0, 0, 0, 0.85); z-index: 20;
+      display: flex; justify-content: center; padding: 15px 0;
+    }
+    nav ul { list-style: none; display: flex; gap: 40px; }
+    nav ul li a { color: white; text-decoration: none; font-size: 1.1rem; }
+    body {
+      font-family: 'Georgia', serif; background-color: #111;
+      color: #fff; line-height: 1.6;
+    }
+
+    video {
+      filter: brightness(0.65);
+    }
+
+    .fullscreen-video {
+      position: relative; height: 100vh; width: 100%; overflow: hidden;
+    }
+    .fullscreen-video video {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+      object-fit: cover; z-index: 0;
+    }
+    .fullscreen-overlay {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;
+    }
+    .fullscreen-text {
+      position: absolute; top: 50%; right: 10%;
+      transform: translateY(-50%); z-index: 2; text-align: right;
+      max-width: 450px; transition: opacity 0.2s ease-out;
+    }
+    .fullscreen-text h1, .services-content h1, .about-content h1 {
+      font-size: 3rem; font-family: 'Georgia', serif; font-weight: normal;
+      line-height: 1.4; color: #fff;
+    }
+
+    .services-container {
+      position: relative; display: flex; width: 100%; height: 100vh;
+      overflow: hidden; z-index: 3; background-color: #111;
+    }
+    .services-container img {
+      width: 50%; height: 100%; object-fit: cover;
+    }
+    .services-content {
+      position: absolute; width: 100%; text-align: center; top: 50%; left: 50%;
+      transform: translate(-50%, -50%); z-index: 2; padding: 20px;
+      background: none; opacity: 0;
+    }
+
+    .scroll-video-wrapper {
+      height: 250vh;
+      position: relative;
+      background-color: #111;
+      z-index: 3;
+    }
+    .sticky-video-container {
+      position: sticky; top: 0; height: 100vh; width: 100%;
+      overflow: hidden; z-index: 1; will-change: transform;
+    }
+    .sticky-video-container video {
+      width: 100%; height: 100%; object-fit: cover;
+    }
+    .about-content {
+      position: absolute; width: 100%; text-align: center; top: 50%; left: 50%;
+      transform: translate(-50%, -50%); z-index: 2; padding: 20px;
+      max-width: 800px;
+      opacity: 0;
+    }
+
+    .contact { text-align: center; background: #111; padding: 60px 20px; position: relative; z-index: 3;}
+    .contact a { color: #fff; text-decoration: none; font-weight: bold; }
+    .instagram-button {
+      display: inline-block; margin-top: 20px; padding: 12px 25px;
+      background: #fff; color: #000; text-decoration: none;
+      border-radius: 30px; transition: background 0.3s;
+    }
+    .instagram-button:hover { background: #ddd; }
+    footer { text-align: center; padding: 30px; background: #000; position: relative; z-index: 3;}
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="#accueil">Accueil</a></li>
+      <li><a href="#services">Nos services</a></li>
+      <li><a href="#apropos">À propos</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="accueil" class="fullscreen-video">
+    <video autoplay muted loop playsinline src="https://res.cloudinary.com/daefs8yza/video/upload/v1752690635/Drone_Site_Serila_zucdyd.mov"></video>
+    <div class="fullscreen-overlay">
+      <div class="fullscreen-text" id="hero-text"><h1>L’art de célébrer<br>dans une paix absolue.</h1></div>
+    </div>
+  </section>
+
+  <section id="services" class="services-container">
+    <img src="gallery1.png" alt="fond 1"><img src="gallery2.png" alt="fond 2">
+    <div class="services-content" id="services-text"><h1>De l’organisation de mariage<br>à la conciergerie haut de gamme</h1></div>
+  </section>
+
+  <div id="apropos" class="scroll-video-wrapper">
+    <div class="sticky-video-container">
+      <video id="scroll-video-1" preload="metadata" playsinline><source src="video1.mp4" type="video/mp4"></video>
+      <div class="about-content" id="about-text">
+        <h1>À propos</h1>
+        <p style="font-size: 1.1rem; line-height: 1.7;">Serila Conciergerie est née d'une passion pour l'élégance et la sérénité. Nous orchestrons vos événements avec rigueur, sensibilité et un goût prononcé pour le détail. Faites l'expérience d'une organisation fluide et haut de gamme, où vous n'avez qu'à profiter.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="video-dessous-wrapper" class="scroll-video-wrapper">
+    <div class="sticky-video-container">
+        <video id="scroll-video-2" preload="metadata" playsinline>
+          <source src="video2.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div style="height: 150vh;"></div>
+  </div>
+
+  <section id="contact" class="contact">
+    <h2>Contactez-nous</h2>
+    <p>📩 Contact en DM Instagram ou par WhatsApp pour un devis personnalisé</p>
+    <p>📱 <a href="https://wa.me/33612345678" target="_blank">+33 6 12 34 56 78</a></p>
+    <a class="instagram-button" href="https://www.instagram.com/serila_conciergerie" target="_blank">📷 Suivez-nous sur Instagram</a>
+  </section>
+
+  <footer>© 2025 Serila Conciergerie — Tous droits réservés.</footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    // ✨ MODIFICATION JS : On réactive la gestion de la deuxième vidéo
+    AOS.init({ once: true, duration: 800 });
+
+    const heroText = document.getElementById('hero-text');
+    const servicesText = document.getElementById('services-text');
+    const servicesSection = document.getElementById('services');
+    const aboutText = document.getElementById('about-text');
+    const aboutSection = document.getElementById('apropos');
+    const scrollVideo1 = document.getElementById('scroll-video-1');
+    const scrollVideoWrapper1 = document.getElementById('apropos');
+    const scrollVideo2 = document.getElementById('scroll-video-2');
+    const scrollVideoWrapper2 = document.getElementById('video-dessous-wrapper');
+
+    function handleFade(section, textElement) {
+      if (!section || !textElement) return;
+      const rect = section.getBoundingClientRect();
+      const screenCenter = window.innerHeight / 2;
+      const sectionCenter = rect.top + rect.height / 2;
+      const distanceFromCenter = Math.abs(sectionCenter - screenCenter);
+      const fadeZone = window.innerHeight * 0.7;
+      const opacity = Math.max(0, 1 - (distanceFromCenter / fadeZone));
+      textElement.style.opacity = opacity.toFixed(2);
+    }
+    function handleHeroFade() {
+      if (!heroText) return;
+      const fadeDistance = 300; 
+      const scrollY = window.scrollY;
+      const opacity = Math.max(0, 1 - (scrollY / fadeDistance));
+      heroText.style.opacity = opacity;
+    }
+    function handleVideoScrub(video, wrapper) {
+        if (!video || !video.duration || !wrapper) return;
+        const rect = wrapper.getBoundingClientRect();
+        if (rect.top <= 0 && rect.bottom >= 0) {
+            const scrollPercent = (-rect.top) / (wrapper.scrollHeight - window.innerHeight);
+            const clampedPercent = Math.min(1, Math.max(0, scrollPercent));
+            video.currentTime = video.duration * clampedPercent;
+        }
+    }
+
+    let ticking = false;
+    document.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          handleHeroFade();
+          handleFade(servicesSection, servicesText);
+          handleFade(aboutSection, aboutText);
+          handleVideoScrub(scrollVideo1, scrollVideoWrapper1);
+          handleVideoScrub(scrollVideo2, scrollVideoWrapper2);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+
+    [scrollVideo1, scrollVideo2].forEach(video => {
+      if(video) {
+        video.addEventListener('loadedmetadata', () => {
+          video.pause();
+        });
+      }
+    });
+  </script>
+</body>
+</html>
