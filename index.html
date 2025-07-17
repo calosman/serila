@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Serila Conciergerie</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #111;
+      color: #fff;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.85);
+      z-index: 20;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 40px;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-family: 'Georgia', serif;
+    }
+
+    .nav-socials {
+      display: none;
+    }
+
+    .fullscreen-video {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .fullscreen-video video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+      filter: brightness(0.65);
+    }
+
+    .fullscreen-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .fullscreen-text {
+      position: absolute;
+      top: 50%;
+      right: 10%;
+      transform: translateY(-50%);
+      z-index: 2;
+      text-align: right;
+      max-width: 450px;
+    }
+
+    .fullscreen-text h1 {
+      font-size: 3rem;
+      font-family: 'Georgia', serif;
+      font-weight: normal;
+      line-height: 1.4;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  
+<nav>
+  <ul id="nav-links">
+    <li><a href="index.html#accueil">Accueil</a></li>
+    <li><a href="services.html">Nos services</a></li>
+    <li><a href="index.html#apropos">À propos</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <div class="nav-socials right">
+    <a href="https://www.instagram.com/serila.fr?igsh=c2g3eWs2YTlua25h&utm_source=qr" target="_blank" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://wa.me/33783813667" target="_blank" aria-label="WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+</nav>
+
+
+  <section id="accueil" class="fullscreen-video">
+    <video autoplay muted loop playsinline src="https://res.cloudinary.com/daefs8yza/video/upload/v1752690635/Drone_Site_Serila_zucdyd.mov"></video>
+    <div class="fullscreen-overlay">
+      <div class="fullscreen-text" id="hero-text">
+        <h1>L’art de célébrer<br>dans une paix absolue.</h1>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
