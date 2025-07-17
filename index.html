@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Serila Conciergerie - Mariage et Événementiel Haut de Gamme</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #111;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.85);
+      z-index: 20;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 40px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+
+    .nav-socials {
+      display: flex;
+      gap: 20px;
+      width: 150px;
+    }
+
+    .nav-socials a {
+      color: #fff;
+      font-size: 1.5rem;
+      text-decoration: none;
+    }
+
+    video {
+      filter: brightness(0.65);
+    }
+
+    .fullscreen-video, .simple-video-section {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .fullscreen-video video,
+    .simple-video-section video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    .fullscreen-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .fullscreen-text {
+      position: absolute;
+      top: 50%;
+      right: 10%;
+      transform: translateY(-50%);
+      z-index: 2;
+      text-align: right;
+      max-width: 450px;
+    }
+
+    .fullscreen-text h1,
+    .services-content h1,
+    .about-content h1 {
+      font-size: 3rem;
+      font-family: 'Georgia', serif;
+      font-weight: normal;
+      color: #fff;
+    }
+
+    .services-container {
+      position: relative;
+      display: flex;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      background-color: #111;
+    }
+
+    .services-container img {
+      width: 50%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .services-content {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      padding: 20px;
+    }
+
+    .scroll-video-wrapper {
+      height: 250vh;
+      position: relative;
+      background-color: #111;
+    }
+
+    .sticky-video-container {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .sticky-video-container video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about-content {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;
+      max-width: 800px;
+    }
+
+    .contact {
+      text-align: center;
+      background: #111;
+      padding: 60px 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #000;
+    }
+
+    .contact p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-socials">
+      <a href="https://www.instagram.com/serila.fr" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/33783813667" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <ul>
+      <li><a href="#accueil">Accueil</a></li>
+      <li><a href="services.html">Nos services</a></li>
+      <li><a href="#apropos">À propos</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-socials"></div>
+  </nav>
+
+  <section id="accueil" class="fullscreen-video">
+    <video autoplay muted loop playsinline src="https://res.cloudinary.com/daefs8yza/video/upload/v1752690635/Drone_Site_Serila_zucdyd.mov"></video>
+    <div class="fullscreen-overlay">
+      <div class="fullscreen-text"><h1>L’art de célébrer<br>dans une paix absolue.</h1></div>
+    </div>
+  </section>
+
+  <section class="services-container">
+    <img src="gallery1.png" alt="fond 1" />
+    <img src="gallery2.png" alt="fond 2" />
+    <div class="services-content"><h1>De l’organisation de mariage<br>à la conciergerie haut de gamme</h1></div>
+  </section>
+
+  <div id="apropos" class="scroll-video-wrapper">
+    <div class="sticky-video-container">
+      <video preload="metadata" playsinline><source src="video1.mp4" type="video/mp4" /></video>
+      <div class="about-content">
+        <h1>À propos</h1>
+        <p>Serila Conciergerie est née d'une passion pour l'élégance et la sérénité. Nous orchestrons vos événements avec rigueur, sensibilité et un goût prononcé pour le détail. Faites l'expérience d'une organisation fluide et haut de gamme, où vous n'avez qu'à profiter.</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="simple-video-section">
+    <video autoplay muted loop playsinline><source src="video2.mp4" type="video/mp4" /></video>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contactez-nous</h2>
+    <p>Contact en DM Instagram ou par WhatsApp pour un devis personnalisé</p>
+  </section>
+
+  <footer>© 2025 Serila Conciergerie — Tous droits réservés.</footer>
+</body>
+</html>
